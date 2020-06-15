@@ -1,0 +1,11 @@
+.Profile {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.foto img {
+  width: 50vw;
+  height: auto;
+}

@@ -3,9 +3,7 @@ import React from "react";
 import "./Projects.css";
 
 const Project = () => {
-  return (
-   
-  );
+  return <div>Hola</div>;
 };
 
 export default Project;

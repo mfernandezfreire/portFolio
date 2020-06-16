@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { useState } from "react";
 
 import { motion, useAnimation } from "framer";
 import { useInView } from "react-intersection-observer";
@@ -21,15 +22,10 @@ import backgrounWorkerbackgrounWorkerOliveRotated1 from "../..//images/backgroun
 const BackgroundWorker = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.5 });
-
-  useEffect(() => {
-    console.log(inView, "Background");
-    if (inView) {
-      controls.start((i) => ({
-        opacity: 0.1,
-      }));
-    }
-  }, [controls, inView]);
+  const [backgroundRandom, setBackgroundRandom] = useState({
+    finalBackground: [],
+    loaded: true,
+  });
 
   const background = [
     backgrounWorkerCBD,
@@ -44,10 +40,30 @@ const BackgroundWorker = () => {
     backgrounWorkerbackgrounWorkerManoRotated2,
     backgrounWorkerbackgrounWorkerOliveRotated1,
   ];
+
+  useEffect(() => {
+    if (inView) {
+      controls.start((i) => ({
+        opacity: 0.1,
+      }));
+    }
+    if (backgroundRandom.loaded === true) {
+      setBackgroundRandom((backgroundRandom.loaded = false));
+      setBackgroundRandom(
+        (backgroundRandom.finalBackground = Array.from(
+          {
+            length: 10,
+          },
+          () => Math.floor(Math.random() * 13)
+        ))
+      );
+    }
+  }, [controls, inView]);
+
   return (
     <div ref={ref} className="BackgroundWorker d-flex flex-row">
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[0]]}
         alt="Logo de desarrollo web"
         initial={{ opacity: 0 }}
         animate={controls}
@@ -64,7 +80,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[1]]}
         alt="Logo de desarrollo web"
         initial={{ opacity: 0 }}
         animate={controls}
@@ -78,7 +94,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[2]]}
         alt="Logo de desarrollo web"
         initial={{ opacity: 0 }}
         animate={controls}
@@ -92,7 +108,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[3]]}
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ delay: Math.floor(Math.random() * 5), duration: 5 }}
@@ -106,7 +122,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[4]]}
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ delay: Math.floor(Math.random() * 5), duration: 3 }}
@@ -120,7 +136,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[5]]}
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ delay: Math.floor(Math.random() * 5), duration: 5 }}
@@ -134,7 +150,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[6]]}
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ delay: Math.floor(Math.random() * 5), duration: 5 }}
@@ -148,7 +164,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[7]]}
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ delay: Math.floor(Math.random() * 5), duration: 5 }}
@@ -162,7 +178,7 @@ const BackgroundWorker = () => {
         }}
       />
       <motion.img
-        src={background[Math.floor(Math.random() * 11)]}
+        src={background[backgroundRandom[8]]}
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ delay: Math.floor(Math.random() * 5), duration: 5 }}

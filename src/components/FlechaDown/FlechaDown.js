@@ -11,7 +11,6 @@ const FlechaDown = () => {
   const [ref, inView] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-    console.log(inView, "Background");
     if (inView) {
       controls.start((i) => ({
         opacity: 1,

@@ -8,8 +8,8 @@ import Projects from "../Projects/Projects";
 function App() {
   return (
     <div className="App">
-      {/* <Header />
-      <Profile /> */}
+      <Header />
+      <Profile />
       <Projects />
     </div>
   );

@@ -18,8 +18,12 @@ const Card = (props) => {
             }}
           ></div>
         </div>
-        <div className="back rounded d-flex justify-content-center align-items-center bg-ligth">
+        <div
+          className="back rounded d-flex justify-content-center align-items-center"
+          style={{ backgroundColor: `${props.color}` }}
+        >
           <div style={{ width: "100%" }}>
+            <h3 className="h.3">{props.titulo}</h3>
             <div>
               <p className="lead p-1">{props.descripcion}</p>
             </div>
@@ -33,6 +37,7 @@ const Card = (props) => {
                 type="button"
                 class="btn btn-outline-secondary mx-1"
                 href={props.linkGit}
+                target="_blank"
               >
                 Git Hub
               </a>
@@ -41,6 +46,7 @@ const Card = (props) => {
                   type="button"
                   class="btn btn-secondary mx-1"
                   href={props.linkWebPage}
+                  target="_blank"
                 >
                   Pagina Web
                 </a>

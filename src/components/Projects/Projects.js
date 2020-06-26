@@ -1,38 +1,31 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import "./Projects.css";
-
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer";
 
 import Project from "../Project/Project";
 import Background from "../Background/Background";
 
-import LookingForMaecenas from "../../images/LookingForMaecenas.png";
-import PathOfProgrammer from "../../images/PathOfProgrammer.png";
-import SocialCoWorker from "../../images/SocialCoWorker.png";
-import portfolio from "../../images/portfolio.png";
-import todoMovieReduxApp from "../../images/todoMovieReduxApp.png";
-import FlechaDown from "../FlechaDown/FlechaDown";
+import LookingForMaecenas from "../../images/Tiles/LookingForMaecenas.png";
+import PathOfProgrammer from "../../images/Tiles/PathOfProgrammer.png";
+import SocialCoWorker from "../../images/Tiles/SocialCoWorker.png";
+import portfolio from "../../images/Tiles/portfolio.png";
+import todoMovieReduxApp from "../../images/Tiles/todoMovieReduxApp.png";
 
 const Projects = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.5 });
-  useEffect(() => {
-    if (inView) {
-      controls.start((i) => ({
-        opacity: 1,
-        transition: { duration: 3, delay: i * 0.7 },
-      }));
-    }
-  }, [controls, inView]);
-
   const projectsArray = [
     {
       titulo: "Portfolio",
       imagen: portfolio,
       descripcion: "Echale un vistazo al codigo de este portfolio",
-      tecnologias: ["MongoDB", "Express", "NodeJS", "React", "Bootstrap"],
+      tecnologias: [
+        "MongoDB",
+        "Express",
+        "NodeJS",
+        "React",
+        "Bootstrap",
+        "Framer-motion",
+        "React-Scroll",
+      ],
       linkGit: "https://github.com/mfernandezfreire/portFolio",
       linkWebPage: "none",
       color: "#f7d79f",
@@ -89,16 +82,16 @@ const Projects = () => {
   ];
 
   return (
-    <div ref={ref} className="bg-light">
-      <Background />
-      <div className="Projects container-fluid bg-light">
-        <motion.h1 custom={0} initial={{ opacity: 0 }} animate={controls}>
-          Proyectos
-        </motion.h1>
-        <div className="row justify-content-center p-4">
-          {projectsArray.map((project, idx) => (
-            <Project {...project} animate={controls} custom={idx + 1} />
-          ))}
+    <div className="Projects">
+      <Background type={"code"} />
+      <h1 className="display-4">Proyectos</h1>
+      <div className="row justify-content-center">
+        <div className="col-9">
+          <div className="row justify-content-center">
+            {projectsArray.map((project) => (
+              <Project {...project} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

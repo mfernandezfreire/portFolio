@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageCode = (props) => {
+const BackgroundImage = (props) => {
   return (
     <div className={props.class}>
       <img
@@ -13,4 +13,4 @@ const ImageCode = (props) => {
   );
 };
 
-export default ImageCode;
+export default BackgroundImage;

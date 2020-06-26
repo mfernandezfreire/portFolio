@@ -3,11 +3,12 @@ import React from "react";
 import "../Projects/Projects.css";
 
 const Card = (props) => {
+  console.log(props);
   const holdTempClass = "cardBox border-0 ";
   return (
     <div className={holdTempClass + props.name}>
       <div className="content rounded">
-        <div className="front rounded">
+        <div className="front rounded" onClick={props.flipCard}>
           <div
             className="frontCard rounded"
             style={{
@@ -39,7 +40,7 @@ const Card = (props) => {
                 href={props.linkGit}
                 target="_blank"
               >
-                Git Hub
+                GitHub
               </a>
               {props.linkWebPage !== "none" && (
                 <a
@@ -48,8 +49,27 @@ const Card = (props) => {
                   href={props.linkWebPage}
                   target="_blank"
                 >
-                  Pagina Web
+                  Web
                 </a>
+              )}
+              {props.linkWebPage !== "none" ? (
+                <button
+                  type="button"
+                  class="btn btn-dark mx-1"
+                  onClick={props.flipCard}
+                  target="_blank"
+                >
+                  Volver
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  class="btn btn-secondary mx-1"
+                  onClick={props.flipCard}
+                  target="_blank"
+                >
+                  Volver
+                </button>
               )}
             </div>
           </div>

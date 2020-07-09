@@ -23,6 +23,12 @@ import mano from "../../images/backgroundPersonalBrand/bgPersonalBrandMano.png";
 import olivo from "../../images/backgroundPersonalBrand/bgPersonalBrandOlive.png";
 import cBraces from "../../images/backgroundPersonalBrand/bgBrandcurlyBraces.png";
 
+//Contact
+import correo from "../../images/Contact/Correo.png";
+import twitter from "../../images/Contact/Linkedin.png";
+import linkedin from "../../images/Contact/Twitter.png";
+import whatsapp from "../../images/Contact/Whatsapp.png";
+
 const Background = (props) => {
   const backgrounds = {
     code: [
@@ -47,25 +53,26 @@ const Background = (props) => {
       { logo: cBraces, class: "col-6 col-sm-4 col-lg-3" },
       { logo: mano, class: "d-none d-sm-block col-sm-4 d-lg-none" },
     ],
+    contact: [
+      { logo: correo, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: linkedin, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: github, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: whatsapp, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: whatsapp, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: github, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: linkedin, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: correo, class: "col-6 col-sm-4 col-lg-3" },
+      { logo: twitter, class: "d-none d-sm-block col-sm-4 d-lg-none" },
+    ],
   };
 
   return (
     <div className="Background row justify-content-center align-items-center p-3">
-      {props.type === "code" ? (
-        <div className="row">
-          {backgrounds.code.map((code) => (
-            <ImageBackground name={code.logo} class={code.class} />
-          ))}
-        </div>
-      ) : (
-        props.type === "personalBrand" && (
-          <div className="row">
-            {backgrounds.personalBrand.map((personal) => (
-              <ImageBackground name={personal.logo} class={personal.class} />
-            ))}
-          </div>
-        )
-      )}
+      <div className="row">
+        {backgrounds[props.type].map((code) => (
+          <ImageBackground name={code.logo} class={code.class} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .Project {
-  height: 40vh;
+  height: 35vh;
 }
 
 /*Card root style */
@@ -29,11 +29,6 @@
   height: 100%;
   width: 100%;
   background: white;
-  /* line-height: 300px;
-  color: #00a896;
-  text-align: center;
-  font-size: 60px;
-  border-radius: 5px; */
   backface-visibility: hidden;
 }
 

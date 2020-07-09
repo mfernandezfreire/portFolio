@@ -12,7 +12,6 @@ import mongo from "../../images/backgroundCode/mongo.png";
 import github from "../../images/backgroundCode/github.png";
 import angular from "../../images/backgroundCode/angular.png";
 import nodeJS from "../../images/backgroundCode/nodeJS.png";
-import express from "../../images/backgroundCode/express.png";
 import bootstrap from "../../images/backgroundCode/bootstrap.png";
 
 import analisis from "../../images/softSkills/analisis.png";

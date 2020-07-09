@@ -12,7 +12,7 @@ import cbDerecho from "../../images/Logo/cbDerecho.png";
 const LogoContact = () => {
   return (
     <div className="row justify-content-center my-2">
-      <div className="col-6 col-sm-3">
+      <div className="col-10 col-sm-3">
         <div className="row">
           <motion.img
             src={engranaje}

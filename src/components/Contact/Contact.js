@@ -52,6 +52,7 @@ const Contact = () => {
                 style={{ background: "gainsboro", color: "black" }}
                 id="emailDeContacto"
                 placeholder="name@ejemplo.com"
+                name="email"
                 value={state.email}
                 onChange={handleState}
               />
@@ -66,6 +67,7 @@ const Contact = () => {
                 style={{ background: "gainsboro", color: "black" }}
                 id="asunto"
                 placeholder="Asunto"
+                name="subject"
                 value={state.subject}
                 onChange={handleState}
               />
@@ -81,6 +83,7 @@ const Contact = () => {
                 style={{ background: "gainsboro", color: "black" }}
                 rows="5"
                 id="Mensaje"
+                name="message"
                 value={state.message}
                 onChange={handleState}
               ></textarea>
@@ -100,32 +103,17 @@ const Contact = () => {
       <div className="row justify-content-center">
         <div className="col-3 col-sm-1">
           <a href="https://www.linkedin.com/in/manufernandezfreire/">
-            <img
-              src={linkedin}
-              className="img-fluid"
-              alt="logo de linkedin"
-              style={{ maxWidth: "100px" }}
-            />
+            <img src={linkedin} className="img-fluid" alt="logo de linkedin" />
           </a>
         </div>
         <div className="col-3 col-sm-1">
           <a href="https://github.com/mfernandezfreire">
-            <img
-              src={github}
-              className="img-fluid"
-              alt="logo de github"
-              style={{ maxWidth: "100px" }}
-            />
+            <img src={github} className="img-fluid" alt="logo de github" />
           </a>
         </div>
         <div className="col-3 col-sm-1">
           <a href="https://twitter.com/manuferfreire">
-            <img
-              src={twitter}
-              className="img-fluid"
-              alt="logo de twitter"
-              style={{ maxWidth: "100px" }}
-            />
+            <img src={twitter} className="img-fluid" alt="logo de twitter" />
           </a>
         </div>
       </div>

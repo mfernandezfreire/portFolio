@@ -7,7 +7,7 @@ import "../Projects/Projects.css";
 const Card = (props) => {
   const holdTempClass = "cardBox border-0 p-2 ";
   return (
-    <Flip duration={2000} left>
+    <Flip duration={1500} left>
       <div className={holdTempClass + props.name}>
         <div className="content rounded">
           <div className="front rounded">

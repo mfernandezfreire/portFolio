@@ -9,9 +9,9 @@ import Contact from "../Contact/Contact";
 function App() {
   return (
     <div className="App">
-      {/* <Header />
+      <Header />
       <Profile />
-      <Projects /> */}
+      <Projects />
       <Contact />
     </div>
   );

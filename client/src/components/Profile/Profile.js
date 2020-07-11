@@ -3,17 +3,20 @@ import React from "react";
 import "./Profile.css";
 
 import fotoPerfil from "../../images/FotoPerfil/fotoPerfil.png";
+import flechaDown from "../../images/Paging/flechaDownWhite.png";
+import flechaUp from "../../images/Paging/flechaUpWhite.png";
 
 import Fade from "react-reveal/Fade";
 import Background from "../Background/Background";
 import CodeLanguajes from "../CodeLanguajes/CodeLanguajes";
-import FlechaDown from "../FlechaDown/FlechaDown";
 
 const Profile = () => {
   return (
-    <div className="Profile container-fluid">
+    <div
+      className="Profile container-fluid"
+      style={{ backgroundColor: " #292b2c" }}
+    >
       <Background type={"personalBrand"} />
-      <FlechaDown delay={2} />
       <Fade duration={2000}>
         <h1 className="display-4 mb-3">Sobre mí</h1>
       </Fade>
@@ -48,6 +51,24 @@ const Profile = () => {
       </div>
       <div className="row justify-content-center mt-0">
         <CodeLanguajes />
+      </div>
+      <div className="row justify-content-center my-4 mx-0">
+        <div className="col-1">
+          <img
+            src={flechaDown}
+            className="img-fluid"
+            style={{ maxWidth: "60px", maxHeight: "60px" }}
+            alt="Imagen Up"
+          />
+        </div>
+        <div className="col-1">
+          <img
+            src={flechaUp}
+            className="img-fluid"
+            style={{ maxWidth: "60px", maxHeight: "60px" }}
+            alt="Imagen Up"
+          />
+        </div>
       </div>
     </div>
   );

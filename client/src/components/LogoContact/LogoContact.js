@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import { motion } from "framer";
 
@@ -10,16 +11,38 @@ import cbIzquierdo from "../../images/Logo/cbIzquierdo.png";
 import cbDerecho from "../../images/Logo/cbDerecho.png";
 
 const LogoContact = () => {
+  const [touched, setTouched] = useState(false);
+
+  const variantGear = {
+    notTouch: { rotate: 720 },
+    touch: { rotate: -720 },
+  };
+
+  const variantCurlyLeft = {
+    notTouch: { x: 0 },
+    touch: { x: 6 },
+  };
+
+  const variantCurlyRigth = {
+    notTouch: { x: 0 },
+    touch: { x: -6 },
+  };
+
   return (
     <div className="row justify-content-center my-2">
       <div className="col-10 col-sm-3">
-        <div className="row">
+        <div
+          className="row"
+          onMouseEnter={() => setTouched(!touched)}
+          onMouseLeave={() => setTouched(!touched)}
+        >
           <motion.img
             src={engranaje}
             className="img-fluid"
             alt="Engranaje"
             style={{ position: "relative" }}
-            animate={{ rotate: 720 }}
+            animate={touched ? "touch" : "notTouch"}
+            variants={variantGear}
             transition={{ loop: Infinity, ease: "linear", duration: 90 }}
           />
           <img
@@ -34,17 +57,23 @@ const LogoContact = () => {
             alt="Hola de olivo"
             style={{ position: "absolute" }}
           />
-          <img
+          <motion.img
             src={cbIzquierdo}
             className="img-fluid"
-            alt="Curly Braces Izquierdo"
+            alt="Curly Brace Izquierdo"
             style={{ position: "absolute" }}
+            animate={touched ? "touch" : "notTouch"}
+            variants={variantCurlyLeft}
+            transition={{ duration: 2 }}
           />
-          <img
+          <motion.img
             src={cbDerecho}
             className="img-fluid"
-            alt="Curly Braces Derecho"
+            alt="Curly Brace Derecho"
             style={{ position: "absolute" }}
+            animate={touched ? "touch" : "notTouch"}
+            variants={variantCurlyRigth}
+            transition={{ duration: 2 }}
           />
         </div>
       </div>

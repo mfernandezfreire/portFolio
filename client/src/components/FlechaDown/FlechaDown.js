@@ -14,7 +14,7 @@ const FlechaDown = (props) => {
     if (inView) {
       controls.start((i) => ({
         opacity: 1,
-        scale: 0.6,
+        scale: 1,
         transition: {
           delay: props.delay,
           duration: 3,
@@ -27,18 +27,17 @@ const FlechaDown = (props) => {
   return (
     <div
       ref={ref}
-      className="FlechaDown row justify-content-center align-items-end"
+      className="FlechaDown row justify-content-center align-items-end p-3"
     >
-      <div className="col-2 col-sm-1">
-        <div className="row">
-          <motion.img
-            src={flechaDown}
-            alt="Logo de desarrollo web"
-            className="img-fluid"
-            initial={{ opacity: 0, scale: 0.2 }}
-            animate={controls}
-          />
-        </div>
+      <div className="col-12">
+        <motion.img
+          src={flechaDown}
+          alt="Logo de desarrollo web"
+          className="img-fluid"
+          style={{ maxWidth: "60px", maxHeight: "60px" }}
+          initial={{ opacity: 0.6, scale: 0.7 }}
+          animate={controls}
+        />
       </div>
     </div>
   );

@@ -4,15 +4,15 @@ import Fade from "react-reveal/Fade";
 
 import "./CodeLanguajes.css";
 
-import reactJS from "../../images/backgroundCode/reactJS.png";
-import html5 from "../../images/backgroundCode/html5.png";
-import css from "../../images/backgroundCode/css.png";
-import js from "../../images/backgroundCode/js.png";
-import mongo from "../../images/backgroundCode/mongo.png";
-import github from "../../images/backgroundCode/github.png";
-import angular from "../../images/backgroundCode/angular.png";
-import nodeJS from "../../images/backgroundCode/nodeJS.png";
-import bootstrap from "../../images/backgroundCode/bootstrap.png";
+import reactJS from "../../images/backgroundCodeWhite/reactJS.png";
+import html5 from "../../images/backgroundCodeWhite/html5.png";
+import css from "../../images/backgroundCodeWhite/css.png";
+import js from "../../images/backgroundCodeWhite/js.png";
+import mongo from "../../images/backgroundCodeWhite/mongo.png";
+import github from "../../images/backgroundCodeWhite/github.png";
+import angular from "../../images/backgroundCodeWhite/angular.png";
+import nodeJS from "../../images/backgroundCodeWhite/nodeJS.png";
+import bootstrap from "../../images/backgroundCodeWhite/bootstrap.png";
 
 import analisis from "../../images/softSkills/analisis.png";
 import creatividadInnovacion from "../../images/softSkills/creatividadInnovacion.png";
@@ -51,7 +51,7 @@ const CodeLanguajes = (props) => {
       <Fade duration={2000} delay={1000} left>
         <div className="col-12 col-sm-3">
           <div className="row justify-content-center">
-            <div className="col-12 ">
+            <div className="col-12 mb-3">
               <h2 className="h2">Hard Skills</h2>
             </div>
             {languajes.map((lang) => (
@@ -77,7 +77,7 @@ const CodeLanguajes = (props) => {
       <Fade duration={2000} delay={1000} right>
         <div className="col-12 offset-sm-1 col-sm-3">
           <div className="row justify-content-center">
-            <div className="col-12">
+            <div className="col-12 mb-3">
               <h2 className="h2">Soft Skills</h2>
             </div>
             {softSkills.map((lang) => (

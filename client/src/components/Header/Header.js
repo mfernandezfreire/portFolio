@@ -1,5 +1,7 @@
 import React from "react";
 
+import Fade from "react-reveal/Fade";
+
 import "./Header.css";
 
 import Background from "../Background/Background";

@@ -1,0 +1,7 @@
+.Contact {
+  display: block;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  text-align: center;
+}

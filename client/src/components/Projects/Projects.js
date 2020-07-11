@@ -84,11 +84,10 @@ const Projects = () => {
   return (
     <div className="Projects">
       <Background type={"code"} />
-      <FlechaDown />
       <h1 className="display-4">Proyectos</h1>
       <div className="row justify-content-center">
         <div className="col-9">
-          <div className="row justify-content-center">
+          <div className="row justify-content-center mb-5">
             {projectsArray.map((project, idx) => (
               <Project idx={idx} {...project} />
             ))}

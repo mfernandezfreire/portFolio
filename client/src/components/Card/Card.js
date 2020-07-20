@@ -31,25 +31,29 @@ const Card = (props) => {
                 <p>{props.descripcion}</p>
               </div>
               <div className="my-1 my-sm-3 p-2">
-                {props.tecnologias.map((tecnologia) => (
-                  <span class="badge badge-secondary mr-1">{tecnologia}</span>
+                {props.tecnologias.map((tecnologia, idx) => (
+                  <span key={idx} className="badge badge-secondary mr-1">
+                    {tecnologia}
+                  </span>
                 ))}
               </div>
               <div>
                 <a
                   type="button"
-                  class="btn btn-outline-secondary mx-1"
+                  className="btn btn-outline-secondary mx-1"
                   href={props.linkGit}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   GitHub
                 </a>
                 {props.linkWebPage !== "none" && (
                   <a
                     type="button"
-                    class="btn btn-secondary mx-1"
+                    className="btn btn-secondary mx-1"
                     href={props.linkWebPage}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Web
                   </a>

@@ -1,7 +1,8 @@
 .Projects {
   display: block;
   width: 100vw;
-  max-width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
   text-align: center;

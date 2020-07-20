@@ -7,7 +7,7 @@ const BackgroundImage = (props) => {
         src={props.name}
         alt="Imagen de logo ReactJS"
         className="img-fluid"
-        style={{ opacity: 0.1 }}
+        style={{ opacity: props.opacity }}
       />
     </div>
   );

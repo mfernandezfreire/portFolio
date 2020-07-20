@@ -4,7 +4,6 @@ import "./Projects.css";
 
 import Project from "../Project/Project";
 import Background from "../Background/Background";
-import FlechaDown from "../FlechaDown/FlechaDown";
 
 import LookingForMaecenas from "../../images/Tiles/LookingForMaecenas.png";
 import PathOfProgrammer from "../../images/Tiles/PathOfProgrammer.png";
@@ -82,14 +81,14 @@ const Projects = () => {
   ];
 
   return (
-    <div className="Projects">
-      <Background type={"code"} />
+    <div className="Projects" style={{ backgroundColor: "#F5F5F5" }}>
+      <Background type={"code"} opacity={0.3} />
       <h1 className="display-4">Proyectos</h1>
       <div className="row justify-content-center">
         <div className="col-9">
           <div className="row justify-content-center mb-5">
             {projectsArray.map((project, idx) => (
-              <Project idx={idx} {...project} />
+              <Project key={idx} {...project} />
             ))}
           </div>
         </div>

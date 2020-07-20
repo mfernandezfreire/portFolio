@@ -1,32 +1,12 @@
 import React from "react";
+import "./Contact.css";
+
 import Axios from "axios";
 import { useFormik } from "formik";
+import { motion } from "framer";
 
 import Background from "../Background/Background";
 import LogoContact from "../LogoContact/LogoContact";
-import SocialContactLogo from "../SocialContactLogo/SocialContactLogo";
-
-import linkedin from "../../images/Contact/Linkedin.png";
-import github from "../../images/backgroundCode/github.png";
-import twitter from "../../images/Contact/Twitter.png";
-
-const socialContact = [
-  {
-    name: "linkedin",
-    image: linkedin,
-    source: "https://www.linkedin.com/in/manufernandezfreire/",
-  },
-  {
-    name: "Git Hub",
-    image: github,
-    source: "https://github.com/mfernandezfreire",
-  },
-  {
-    name: "Twitter",
-    image: twitter,
-    source: "https://twitter.com/manuferfreire",
-  },
-];
 
 const validate = (values) => {
   const errors = {};
@@ -84,7 +64,7 @@ const Contact = () => {
 
   return (
     <div className="Contact container-fluid">
-      <Background type={"contact"} />
+      <Background type={"contact"} opacity={0.1} />
       <h1 className="display-4 text-center">Contacta Conmigo</h1>
       <div className="row justify-content-center">
         <div className="col-6 mb-5">
@@ -110,13 +90,13 @@ const Contact = () => {
                 placeholder="name@ejemplo.com"
               />
               {formik.touched.email && formik.errors.email ? (
-                <small id="emailHelp" class="form-text">
+                <small id="emailHelp" className="form-text text-danger">
                   {formik.errors.email}
                 </small>
               ) : null}
             </div>
             <div className="form-group">
-              <label for="asunto" className="h5 mb-3">
+              <label htmlFor="asunto" className="h5 mb-3">
                 Asunto
               </label>
               <input
@@ -131,7 +111,7 @@ const Contact = () => {
                 placeholder="Asunto"
               />
               {formik.touched.subject && formik.errors.subject ? (
-                <small id="subjectHelp" class="form-text">
+                <small id="subjectHelp" class="form-text text-danger">
                   {formik.errors.subject}
                 </small>
               ) : null}
@@ -139,7 +119,7 @@ const Contact = () => {
           </div>
           <div className="col-9 col-sm-3 ml-2">
             <div className="form-group">
-              <label for="Mensaje" className="h5 mb-3">
+              <label htmlFor="Mensaje" className="h5 mb-3">
                 Mensaje
               </label>
               <textarea
@@ -154,38 +134,24 @@ const Contact = () => {
                 rows="5"
               ></textarea>
               {formik.touched.message && formik.errors.email ? (
-                <small id="emailHelp" class="form-text">
-                  {formik.errors.email}
+                <small id="emailHelp" class="form-text text-danger">
+                  {formik.errors.message}
                 </small>
               ) : null}
             </div>
           </div>
           <div className="col-12 text-center">
-            <button type="submit" className="btn btn-secondary btn-lg">
+            <motion.button
+              type="submit"
+              className="btn btn-dark btn-lg"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               Enviar
-            </button>
+            </motion.button>
           </div>
         </div>
       </form>
-      <div className="row justify-content-center">
-        {socialContact.map((social) => (
-          <SocialContactLogo
-            name={social.name}
-            image={social.image}
-            source={social.source}
-          />
-        ))}
-      </div>
-      <div className="row mt-5">
-        <div className="col-12">
-          <p className="text-center mb-0" style={{ fontSize: "1.5rem" }}>
-            Manuel Fernandez Freire ©
-          </p>
-          <p className="text-center" style={{ fontSize: "1.5rem" }}>
-            2020
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

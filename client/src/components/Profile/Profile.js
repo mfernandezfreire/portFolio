@@ -3,8 +3,6 @@ import React from "react";
 import "./Profile.css";
 
 import fotoPerfil from "../../images/FotoPerfil/fotoPerfil.png";
-import flechaDown from "../../images/Paging/flechaDownWhite.png";
-import flechaUp from "../../images/Paging/flechaUpWhite.png";
 
 import Fade from "react-reveal/Fade";
 import Background from "../Background/Background";
@@ -14,9 +12,9 @@ const Profile = () => {
   return (
     <div
       className="Profile container-fluid"
-      style={{ backgroundColor: " #292b2c" }}
+      style={{ backgroundColor: " 	#E8E8E8" }}
     >
-      <Background type={"personalBrand"} />
+      <Background type={"personalBrand"} opacity={0.1} />
       <Fade duration={2000}>
         <h1 className="display-4 mb-3">Sobre mí</h1>
       </Fade>
@@ -34,41 +32,26 @@ const Profile = () => {
         <Fade duration={2000} delay={1000} right>
           <div className="col-10 col-sm-7 col-lg-6 mt-3 mt-sm-0">
             <p className="text-justify">
-              Full Stack Developer en &lt;<code>construción</code>
+              Soy un web developer junior que proviene de un mundo laboral que
+              se asemeja bien diferente, el trabajo social. Aunque, si te paras
+              a pensar en lo que significa ser developer tiene mucho social.
+              {/* Full Stack Developer en &lt;<code>construción</code>
               &gt;, diplomado en trabajo social, apasionado de las nuevas
-              tecnologías y de las ciencias sociales.
+              tecnologías y de las ciencias sociales. */}
             </p>
             <p className="text-justify">
-              Hace un año decidi hacer una cambio laboral que en su momento
-              parecia un giro de 180º, pasar de ser trabajador social a web
-              developer. Y solo lo parecia porque no pueden existir mas
-              similitudes entre estas dos profesiones.... Trabajas con personas
-              y para personas, la escucha, asertividad, habilidades sociales y
-              el trabajo en equipo es son fundamentales.
+              Trabajas con personas y para personas. La escucha, asertividad,
+              empatía, capacidad de negoción es decir, todas las habilidades
+              sociales básicas que fomenta mi profesión de origen son
+              fundamentales para que un programdor sea un buen profesional.
+              Aunar lo aprendido como trabajador social y web developer es más
+              fácil de lo que te puedes imaginar.....
             </p>
           </div>
         </Fade>
       </div>
       <div className="row justify-content-center mt-0">
         <CodeLanguajes />
-      </div>
-      <div className="row justify-content-center my-4 mx-0">
-        <div className="col-1">
-          <img
-            src={flechaDown}
-            className="img-fluid"
-            style={{ maxWidth: "60px", maxHeight: "60px" }}
-            alt="Imagen Up"
-          />
-        </div>
-        <div className="col-1">
-          <img
-            src={flechaUp}
-            className="img-fluid"
-            style={{ maxWidth: "60px", maxHeight: "60px" }}
-            alt="Imagen Up"
-          />
-        </div>
       </div>
     </div>
   );

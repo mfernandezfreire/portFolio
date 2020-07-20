@@ -69,8 +69,13 @@ const Background = (props) => {
   return (
     <div className="Background row justify-content-center align-items-center p-3">
       <div className="row">
-        {backgrounds[props.type].map((code) => (
-          <ImageBackground name={code.logo} class={code.class} />
+        {backgrounds[props.type].map((code, idx) => (
+          <ImageBackground
+            key={idx}
+            name={code.logo}
+            class={code.class}
+            opacity={props.opacity}
+          />
         ))}
       </div>
     </div>

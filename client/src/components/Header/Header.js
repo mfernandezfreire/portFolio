@@ -1,7 +1,5 @@
 import React from "react";
 
-import Fade from "react-reveal/Fade";
-
 import "./Header.css";
 
 import Background from "../Background/Background";
@@ -12,13 +10,13 @@ import Flecha from "../FlechaDown/FlechaDown";
 const Header = () => {
   return (
     <div className="Header container-fluid">
-      <Background type={"code"} />
-      <Flecha delay={4} />
+      <Background type={"code"} opacity={0.3} />
+      <Flecha />
       <Logo />
       <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center mt-3 mt-sm-5">
-        <Button titulo={"Sobre mi"} />
-        <Button titulo={"Mis proyectos"} />
-        <Button titulo={"Hablemos"} />
+        <Button titulo={"Sobre mi"} link={"Profile"} duration={1000} />
+        <Button titulo={"Mis proyectos"} link={"Projects"} duration={2000} />
+        <Button titulo={"Hablemos"} link={"Contact"} duration={3000} />
       </div>
     </div>
   );

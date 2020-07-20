@@ -82,7 +82,7 @@ const Logo = () => {
           Manuel Fernández Freire
         </motion.h1>
         <motion.h3
-          class="h1 d-none d-sm-block"
+          className="h1 d-none d-sm-block"
           initial={{ x: "-40vw", opacity: 0 }}
           animate={{ opacity: 1, x: "0vw" }}
           transition={{ delay: 4, duration: 3 }}
@@ -92,7 +92,7 @@ const Logo = () => {
           Web Developer
         </motion.h3>
         <motion.h3
-          class="h3 d-sm-none"
+          className="h3 d-sm-none"
           initial={{ x: "-40vw", opacity: 0 }}
           animate={{ opacity: 1, x: "0vw" }}
           transition={{ delay: 4, duration: 3 }}

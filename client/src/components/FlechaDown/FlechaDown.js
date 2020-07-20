@@ -7,7 +7,7 @@ import "./FlechaDown.css";
 
 import flechaDown from "../../images/Paging/flechaDown.png";
 
-const FlechaDown = (props) => {
+const FlechaDown = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.5 });
   useEffect(() => {
@@ -16,7 +16,7 @@ const FlechaDown = (props) => {
         opacity: 1,
         scale: 1,
         transition: {
-          delay: props.delay,
+          delay: 5,
           duration: 3,
           yoyo: Infinity,
         },
@@ -35,7 +35,7 @@ const FlechaDown = (props) => {
           alt="Logo de desarrollo web"
           className="img-fluid"
           style={{ maxWidth: "60px", maxHeight: "60px" }}
-          initial={{ opacity: 0.6, scale: 0.7 }}
+          initial={{ opacity: 0, scale: 0.7 }}
           animate={controls}
         />
       </div>

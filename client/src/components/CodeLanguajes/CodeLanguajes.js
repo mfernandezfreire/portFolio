@@ -49,7 +49,7 @@ const CodeLanguajes = (props) => {
         </div>
       </Fade>
       <Fade duration={2000} delay={1000} left>
-        <div className="col-12 col-sm-3">
+        <div className="col-12 col-md-3">
           <div className="row justify-content-center p-4 mb-3">
             <div className="col-12 mb-3">
               <h2 className="h2">Hard Skills</h2>
@@ -75,7 +75,7 @@ const CodeLanguajes = (props) => {
         </div>
       </Fade>
       <Fade duration={2000} delay={1000} right>
-        <div className="col-12 offset-sm-1 col-sm-3">
+        <div className="col-12 offset-md-1 col-md-3">
           <div className="row justify-content-center p-4 mb-3">
             <div className="col-12 mb-3">
               <h2 className="h2">Soft Skills</h2>

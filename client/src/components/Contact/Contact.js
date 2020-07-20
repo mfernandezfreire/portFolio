@@ -73,7 +73,7 @@ const Contact = () => {
       </div>
       <form onSubmit={formik.handleSubmit}>
         <div className="row justify-content-center mb-5">
-          <div className="col-9 col-sm-3 mr-2">
+          <div className="col-9 col-md-3 mr-2">
             <div className="form-group">
               <label htmlFor="emailDeContacto" className="h5 mb-3">
                 Email de Contacto
@@ -117,7 +117,7 @@ const Contact = () => {
               ) : null}
             </div>
           </div>
-          <div className="col-9 col-sm-3 ml-2">
+          <div className="col-9 col-md-3 ml-2">
             <div className="form-group">
               <label htmlFor="Mensaje" className="h5 mb-3">
                 Mensaje

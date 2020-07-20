@@ -8,7 +8,7 @@ import { motion } from "framer";
 const Button = (props) => {
   return (
     <Zoom delay={5000} duration={3000}>
-      <div className="col-6 col-sm-3">
+      <div className="col-7 col-sm-3">
         <Link
           activeClass="active"
           className="d-none d-sm-block"

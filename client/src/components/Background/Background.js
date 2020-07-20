@@ -32,15 +32,15 @@ import whatsapp from "../../images/Contact/Whatsapp.png";
 const Background = (props) => {
   const backgrounds = {
     code: [
-      { logo: reactJS, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: html5, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: css, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: js, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: mongo, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: github, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: git, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: angular, class: "col-6 col-sm-4 col-lg-3" },
-      { logo: js, class: "d-none d-sm-block col-sm-4 d-lg-none" },
+      { logo: reactJS, class: "col-6 col-md-4 col-lg-3" },
+      { logo: html5, class: "col-6 col-md-4 col-lg-3" },
+      { logo: css, class: "col-6 col-md-4 col-lg-3" },
+      { logo: js, class: "col-6 col-md-4 col-lg-3" },
+      { logo: mongo, class: "col-6 col-md-4 col-lg-3" },
+      { logo: github, class: "col-6 col-md-4 col-lg-3" },
+      { logo: git, class: "col-6 col-md-4 col-lg-3" },
+      { logo: angular, class: "col-6 col-md-4 col-lg-3" },
+      { logo: js, class: "d-none d-md-block col-md-4 d-lg-none" },
     ],
     personalBrand: [
       { logo: logo, class: "col-6 col-sm-4 col-lg-3" },

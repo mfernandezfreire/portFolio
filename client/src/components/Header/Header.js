@@ -15,7 +15,7 @@ const Header = () => {
       <Logo />
       <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center mt-3 mt-sm-5">
         <Button titulo={"Sobre mi"} link={"Profile"} duration={1000} />
-        <Button titulo={"Mis proyectos"} link={"Projects"} duration={2000} />
+        <Button titulo={"Proyectos"} link={"Projects"} duration={2000} />
         <Button titulo={"Hablemos"} link={"Contact"} duration={3000} />
       </div>
     </div>

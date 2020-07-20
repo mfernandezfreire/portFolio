@@ -20,7 +20,7 @@ const Profile = () => {
       </Fade>
       <div className="row justify-content-center my-3">
         <Fade duration={2000} delay={1000} left>
-          <div className="col-6 col-sm-3 col-lg-2">
+          <div className="col-6 col-md-3 col-lg-2">
             <img
               className="img-fluid rounded"
               alt="Imagen de prueba"
@@ -30,7 +30,7 @@ const Profile = () => {
           </div>
         </Fade>
         <Fade duration={2000} delay={1000} right>
-          <div className="col-10 col-sm-7 col-lg-6 mt-3 mt-sm-0">
+          <div className="col-10 col-md-7 col-lg-6 mt-3 mt-sm-0">
             <p className="text-justify">
               Soy un web developer junior que proviene de un mundo laboral que
               se asemeja bien diferente, el trabajo social. Aunque, si te paras

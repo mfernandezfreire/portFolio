@@ -16,7 +16,7 @@ const Project = (props) => {
 
   return (
     <div
-      className="Project col-12 col-sm-6 col-lg-3 mx-2 my-3"
+      className="Project col-12 col-md-6 col-lg-3 mx-2 my-3"
       onClick={flipCard}
     >
       <Card
